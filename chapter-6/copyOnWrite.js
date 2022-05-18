@@ -1,7 +1,7 @@
 let mailingList = [];
 
 function setQuantityByName(cart, name, quantity) {
-    const cartCopy = cart.slice()
+    const cartCopy = [... cart]
     for (let i = 0; i < cartCopy.length; i++) {
         if (cartCopy[i].name === name) {
             cartCopy[i] = setQuantity(cartCopy[i], quantity)
@@ -10,7 +10,7 @@ function setQuantityByName(cart, name, quantity) {
     return cartCopy}
 
 function setPriceByName(cart, name, price) {
-    const cartCopy = cart.slice()
+    const cartCopy = [... cart]
     for (let i = 0; i < cartCopy.length; i++) {
         if (cartCopy[i].name === name) {
             cartCopy[i] = setPrice(cartCopy[i], price)
@@ -52,13 +52,13 @@ function addContact(mailingList, email) {
 }
 
 function removeItems(array, index, count) {
-    const newArray = array.slice()
+    const newArray = [... array]
     newArray.splice(index, count)
     return newArray
 }
 
 function push(array, item) {
-    const newArray = array.slice();
+    const newArray = [... array]
     newArray.push(item);
     return newArray;
 }

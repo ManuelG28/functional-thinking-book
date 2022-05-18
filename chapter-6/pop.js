@@ -3,7 +3,7 @@ function getLastElement(array) {
 }
 
 function dropLastElement(array){
-    const newArr = array.slice()
+    const newArr = [... array]
     newArr.pop()
     return newArr;
 }
