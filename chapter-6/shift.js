@@ -3,7 +3,7 @@ function getFirstElement(array) {
 }
 
 function dropFirst(array) {
-    const newArray = array.slice()
+    const newArray = [... array]
     newArray.shift()
     return newArray;
 }
